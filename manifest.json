@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Replika Chess",
+  "version": "1.0",
+  "description": "Let's play chess with our Replika.",
+  "permissions": ["tabs", "activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "https://my.replika.com/*", "https://my.replika.ai/*"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
