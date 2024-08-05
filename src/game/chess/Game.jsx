@@ -21,10 +21,12 @@ const Game = () => {
 
     return (
         <section className='game-board'>
+            {/*
             <section className='users'>
                 <span>User: </span><input type='text' value={userName} onChange={(e) => setUserName(e.target.value)} />
                 <span>Replika: </span><input type='text' value={replikaName} onChange={(e) => setReplikaName(e.target.value)} />
             </section>
+            */}
             <Rank></Rank>
             <ChessBoard chess={chess} newGame={newGame}></ChessBoard> 
             <File></File>
