@@ -12,7 +12,8 @@ export default defineConfig({
         { src: 'manifest.json', dest: '' },
         { src: 'src/ReplikaChess.svg', dest: '' },
         { src: 'src/fa', dest: '' },
-        { src: 'src/assets', dest: '' }
+        { src: 'src/assets', dest: '' },
+        { src: 'src/replika-chess/assets', dest: '' }
       ]
     })
   ],
