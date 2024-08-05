@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 /* https://zythis-xorandor.github.io */
 export default defineConfig({
-  base: './',
+  base: '',
   base_live: '/replika-chess/',
   plugins: [
     react(),
@@ -12,8 +12,7 @@ export default defineConfig({
         { src: 'manifest.json', dest: '' },
         { src: 'src/ReplikaChess.svg', dest: '' },
         { src: 'src/fa', dest: '' },
-        { src: 'src/assets', dest: '' },
-        { src: 'src/replika-chess/assets', dest: '' }
+        { src: 'src/assets', dest: '' }
       ]
     })
   ],

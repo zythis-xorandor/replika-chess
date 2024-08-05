@@ -16,7 +16,9 @@ const ChessBoard = ({ chess, newGame }) => {
   const [gameStatus, setGameStatus] = useState('');
 
   const moveListRef = useRef();
-
+  const host = {
+    isGhPages: window.location.href.toLowerCase().includes('.github.io') && true
+};
   const pieceIcons = {
     p: 'fa-chess-pawn',
     r: 'fa-chess-rook',
@@ -94,6 +96,9 @@ const ChessBoard = ({ chess, newGame }) => {
             <div
               key={colIndex}
               className={`chess-board-square ${isAltSquare ? 'chess-board-square-alt' : ''} ${isSelected ? 'selected' : ''} ${isValidMove ? 'valid-move' : ''}`}
+              style={{
+                backgroundImage: `url(${host.isGhPages ? '/replika-chess/' : '/'}assets/${isAltSquare ? 'blackTile' : 'whiteTile'}.png) !important`
+            }}
               onMouseEnter={() => handleMouseEnter(rowIndex, colIndex)}
               onClick={() => handleSquareClick(rowIndex, colIndex)}
             >

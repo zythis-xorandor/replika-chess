@@ -18,10 +18,16 @@ const Game = () => {
 
     const newGame= () => {
         setChess(new Chess());
+    }
+
+    const host = {
+        isGhPages: window.location.href.toLowerCase().includes('.github.io') && true
     };
 
     return (
-        <section className='game-board'>
+        <section className='game-board' style={{
+            backgroundImage: `url(${host.isGhPages ? '/replika-chess/' : '/'}assets/boardBorder.png) !important`
+        }}>
             {/*
             <section className='users'>
                 <span>User: </span><input type='text' value={userName} onChange={(e) => setUserName(e.target.value)} />
