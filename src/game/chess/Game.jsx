@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react';
 import { Chess } from 'chess.js'; // Make sure to import Chess from chess.js
 import Rank from './board/Rank';
