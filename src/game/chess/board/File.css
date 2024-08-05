@@ -1,0 +1,19 @@
+.file-labels {
+    position: absolute;
+    top: 288px;
+    left: 32px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.file-label {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block !important;
+    clear: both;
+    color: black;
+    text-align: center;
+}

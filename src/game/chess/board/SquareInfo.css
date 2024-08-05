@@ -1,0 +1,11 @@
+
+.selected-piece {
+    position: absolute;
+    top: 26px;
+    left: 448px;
+    z-index: 100;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    list-style-type: none;
+    width: 300px;
+}

@@ -1,0 +1,152 @@
+.chess-board-container {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 256px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  display: inline-block !important;
+  background-color: black;
+}
+
+.chess-board-row {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  display: inline-block !important;
+}
+
+.chess-board-square, .chess-board-square-alt {
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  display: inline-block;
+  box-sizing: border-box; /* Include padding and border in the element's total size */
+  text-align: center;
+  vertical-align: middle;
+  box-shadow: inset 0 0 0 1px #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.chess-board-square {
+  background-color: #f0f0f0;
+  background-image: url('./whiteTile.png');
+}
+
+.chess-board-square-alt {
+  background-color: #2b2b2b;
+  background-image: url('./blackTile.png');
+}
+
+
+.chess-board-square:hover ,.chess-board-square-alt:hover{
+
+  box-shadow: inset 0 0 0 1px rgb(255, 102, 0) !important;
+}
+
+.b {
+  color: black;
+}
+
+.w {
+  color: white
+}
+
+.chess-piece-container {
+  position: relative; /* Allows positioning of the child elements */
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.chess-piece-border {
+  position: absolute;
+  font-size: 26px; /* Slightly larger for the border effect */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the icon */
+  opacity: 0.5; /* Optional: make the border icon slightly transparent */
+}
+
+.chess-piece {
+  position: absolute;
+  font-size: 24px; /* Smaller than the border icon */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure this is on top of the border */
+}
+
+.white-piece {
+  color: #ffffff; /* White piece color */
+}
+
+.black-piece {
+  color: #000000; /* Black piece color */
+}
+
+.white-border {
+  color: #ffffff; /* White border color */
+}
+
+.black-border {
+  color: #000000; /* Black border color */
+}
+
+.game-turn {
+  position: absolute;
+  top: -4px;
+  left: 12px;
+  margin:  0;
+  padding: 0;
+  display: inline-block !important;
+  border-radius: 32px;
+  font-weight: bolder;
+}
+
+.game-status {
+  position: absolute;
+  top: 348px;
+  left: 32px;
+  width: 256px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  display: inline-block !important;
+}
+
+.dot-container {
+  position: relative; /* Allows positioning of the child elements */
+  display: inline-block;
+}
+
+.dot-border {
+  position: absolute;
+  font-size: 16px; /* Slightly larger for the border effect */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the icon */
+  opacity: 0.5; /* Optional: make the border icon slightly transparent */
+}
+
+.dot {
+  position: absolute;
+  font-size: 14px; /* Smaller than the border icon */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure this is on top of the border */
+}
+
+.selected {
+  box-shadow: inset 0 0 0 1px gold !important;
+}
+
+.new-game {
+  position: absolute;
+  top: 0px;
+  left: 340px;
+  z-index: 100;
+}
