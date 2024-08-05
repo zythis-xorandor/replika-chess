@@ -18,7 +18,7 @@ const ChessBoard = ({ chess, newGame }) => {
   const moveListRef = useRef();
   const host = {
     isGhPages: window.location.href.toLowerCase().includes('.github.io') && true
-};
+  };
   const pieceIcons = {
     p: 'fa-chess-pawn',
     r: 'fa-chess-rook',
@@ -98,7 +98,7 @@ const ChessBoard = ({ chess, newGame }) => {
               className={`chess-board-square ${isAltSquare ? 'chess-board-square-alt' : ''} ${isSelected ? 'selected' : ''} ${isValidMove ? 'valid-move' : ''}`}
               style={{
                 backgroundImage: `url(${host.isGhPages ? '/replika-chess/' : '/'}assets/${isAltSquare ? 'blackTile' : 'whiteTile'}.png) !important`
-            }}
+              }}
               onMouseEnter={() => handleMouseEnter(rowIndex, colIndex)}
               onClick={() => handleSquareClick(rowIndex, colIndex)}
             >
@@ -134,13 +134,12 @@ const ChessBoard = ({ chess, newGame }) => {
         <p>{gameStatus}</p>
       </section>
       <SquareInfo chess={chess} square={selectedSquare} piece={selectedPiece}></SquareInfo>
-      <MoveList ref={moveListRef} chess={chess} />
+      <MoveList ref={moveListRef} chess={chess} validMoves={validMoves} />
       <input className='new-game' type='button' value='New Game' onClick={() => {
-          newGame();
-          moveListRef.current.clearMoves();
+        newGame();
+        moveListRef.current.clearMoves();
       }} />
-  
-        </>
+    </>
   );
 };
 

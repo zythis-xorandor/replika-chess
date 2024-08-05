@@ -20,9 +20,17 @@
 }
 
 .save-to-clipboard {
-    Display: none;
+    display: none;
 }
 
 .game-from-clipboard {
     display: none;
+}
+
+.make-move {
+    position: absolute;
+    top: 0px;
+    left: 426px;
+    width: 200px;
+    z-index: 100;
 }

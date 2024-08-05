@@ -6,9 +6,11 @@ import { useState, forwardRef, useImperativeHandle, useEffect } from 'react';
 import './MoveList.css';
 
 // eslint-disable-next-line react/prop-types
-const MoveList = forwardRef(({ chess }, ref) => {
+const MoveList = forwardRef(({ chess, validMoves }, ref) => {
   const [moves, setMoves] = useState([]);
   const [selectedMove, setSelectedMove] = useState('');
+  const [makeMove, setMakeMove] = useState('');
+  const [isInvalidTextMove, setIsInvalidTextMove] = useState(true);
 
   // Set the initial selected option to the last item in the options array
   useEffect(() => {
@@ -109,6 +111,33 @@ It's your turn.
       <input className='game-from-clipboard' type='button' value='Game from Clipboard' onClick={() => {
         loadPGNFromClipboard();
       }} />
+
+      <section className='make-move'>
+        <input style={{width: '78px'}} type='text' value={makeMove} onChange={(e) => {
+          setMakeMove(e.target.value);
+          const aMoves = chess.moves();
+          const m = aMoves.find((v) => {
+            return makeMove.includes(v);
+          });
+          setIsInvalidTextMove(true && m);
+        }} />
+        <input disabled={isInvalidTextMove} className='sans-move' type='button' value='Move' onClick={() => {
+          const aMoves = chess.moves();
+          const m = aMoves.find((v) => {
+            return makeMove.includes(v);
+          });
+          if (m) {
+            const msg = chess.move(m);
+            if(msg){
+              addMove(msg.san);
+            } else {
+              //
+            }
+            
+            
+          }
+        }} />
+      </section>
     </>
   );
 });
