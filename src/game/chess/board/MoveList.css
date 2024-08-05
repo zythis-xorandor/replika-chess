@@ -18,3 +18,11 @@
     font-weight: bolder;
     cursor: auto;
 }
+
+.save-to-clipboard {
+    Display: none;
+}
+
+.game-from-clipboard {
+    display: none;
+}
